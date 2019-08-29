@@ -28,12 +28,6 @@ newcate = subparser.add_parser('newcate', help='create a new spendings category'
 newcate.add_argument('name', help='name of new category')
 newcate.set_defaults(func=commands.newcate)
 
-#newsrc <name> <amount>
-#newsrc = subparser.add_parser('newsrc', help='create a new source of money')
-#newsrc.add_argument('name', help='name of source')
-#newsrc.add_argument('amount', help='amount of money currently in source', type=int)
-#newsrc.set_defaults(func=newsrc)
-
 #listcate
 listcate = subparser.add_parser('listcate', help='list all categories')
 listcate.set_defaults(func=commands.listcate)
@@ -41,9 +35,6 @@ listcate.set_defaults(func=commands.listcate)
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()
 args.func(args)
-
-print(commands.globalvar.masterCate)
-print(commands.globalvar.listStrCate)
 
 #pickling new data after program's completion
 with open('./commands/globalpickle/masterSource.pickle', 'wb') as file:
