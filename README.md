@@ -40,7 +40,7 @@ These helps will also be displayed with the built-in help commands. You can inpu
 ./main.py newcate 'books'
 ```
 
-newcate <name>: Create a new category to put spendings under.
+newcate \<name\>: Create a new category to put spendings under.
 
 listcate: List all created categories
 
