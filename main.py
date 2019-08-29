@@ -6,7 +6,6 @@ import io
 import argparse
 import sys
 
-from classes import source, category, spendEntry
 import commands
 
 #Standard argument parser
@@ -35,40 +34,23 @@ newcate.set_defaults(func=commands.newcate)
 #newsrc.add_argument('amount', help='amount of money currently in source', type=int)
 #newsrc.set_defaults(func=newsrc)
 
+#listcate
+listcate = subparser.add_parser('listcate', help='list all categories')
+listcate.set_defaults(func=commands.listcate)
+
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()
-print(args)
-print(commands.globalvar.masterCate)
 args.func(args)
 
-#src1 = source('wallet', 200)
-#src2 = source('tdacc', 1000)
-#cat1 = category('games')
-#cat2 = category('books')
-#
-#x1 = spendEntry('fe3h', 50, 'GOTY no regrets')
-#x2 = spendEntry('ps4', 110, 'ehhh')
-#y1 = spendEntry('graphics', 27)
-#y2 = spendEntry('physics', 8)
-#
-#src1.addEntry(x1)
-#src2.addEntry(x2)
-#src2.addEntry(y1)
-#src2.addEntry(y2)
-#cat1.addEntry(x1)
-#cat1.addEntry(x2)
-#cat2.addEntry(y1)
-#cat2.addEntry(y2)
-#
-#src1.display()
-#src2.display()
-#cat1.display()
-#cat2.display()
+print(commands.globalvar.masterCate)
+print(commands.globalvar.listStrCate)
 
-#with open('src2.pickle', 'wb') as file:
-#    pickle.dump(src2, file)
-#
-#with open('src2.pickle', 'rb') as file:
-#    srcPickle = pickle.load(file)
-#
-#srcPickle.display()
+#pickling new data after program's completion
+with open('commands/globalpickle/masterSource.pickle', 'wb') as file:
+    pickle.dump(commands.globalvar.masterSource, file)
+with open('commands/globalpickle/masterCate.pickle', 'wb') as file:
+    pickle.dump(commands.globalvar.masterCate, file)
+with open('commands/globalpickle/listStrSource.pickle', 'wb') as file:
+    pickle.dump(commands.globalvar.listStrSource, file)
+with open('commands/globalpickle/listStrCate.pickle', 'wb') as file:
+    pickle.dump(commands.globalvar.listStrCate, file)

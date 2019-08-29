@@ -2,3 +2,4 @@
 
 from . import globalvar
 from .newcate import newcate
+from .listcate import listcate
