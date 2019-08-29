@@ -46,11 +46,11 @@ print(commands.globalvar.masterCate)
 print(commands.globalvar.listStrCate)
 
 #pickling new data after program's completion
-with open('commands/globalpickle/masterSource.pickle', 'wb') as file:
+with open('./commands/globalpickle/masterSource.pickle', 'wb') as file:
     pickle.dump(commands.globalvar.masterSource, file)
-with open('commands/globalpickle/masterCate.pickle', 'wb') as file:
+with open('./commands/globalpickle/masterCate.pickle', 'wb') as file:
     pickle.dump(commands.globalvar.masterCate, file)
-with open('commands/globalpickle/listStrSource.pickle', 'wb') as file:
+with open('./commands/globalpickle/listStrSource.pickle', 'wb') as file:
     pickle.dump(commands.globalvar.listStrSource, file)
-with open('commands/globalpickle/listStrCate.pickle', 'wb') as file:
+with open('./commands/globalpickle/listStrCate.pickle', 'wb') as file:
     pickle.dump(commands.globalvar.listStrCate, file)
