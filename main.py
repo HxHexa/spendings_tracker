@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+#main program
 
 import pickle
 import io
 import argparse
+import sys
 
-from spendEntryClass import spendEntry
-from sourceClass import source
-from categoryClass import category
+from classes import source, category, spendEntry
+import commands
 
 #Used to keep track of all sources and categories through sessions
 #To be pickled/depickled at start of program
@@ -24,14 +25,27 @@ listStrCate = ''
 parser = argparse.ArgumentParser()
 subparser = parser.add_subparsers()
 
+#changing the default behavior when no argument is given
+#thanks to: https://stackoverflow.com/questions/4042452/display-help-message-with-python-argparse-when-script-is-called-without-any-argu
+if len(sys.argv)==1:
+    parser.print_help(sys.stderr)
+    sys.exit(1)
+
+#TBDone: delsrc delcate delentry --version
 #newcate <name>
+newcate = subparser.add_parser('newcate', help='create a new spendings category')
+newcate.add_argument('name', help='name of new category')
+newcate.set_defaults(func=commands.newcate)
+
 #newsrc <name> <amount>
-#addentry <name> <amount>
-#listsrc
-#listcate
-#viewsrc <name>
-#viewcate <name>
-#TBD: delsrc delcate delentry --version
+#newsrc = subparser.add_parser('newsrc', help='create a new source of money')
+#newsrc.add_argument('name', help='name of source')
+#newsrc.add_argument('amount', help='amount of money currently in source', type=int)
+#newsrc.set_defaults(func=newsrc)
+
+#calling the default functions, defined in the specific commands files
+args = parser.parse_args()
+args.func(args)
 
 #src1 = source('wallet', 200)
 #src2 = source('tdacc', 1000)
@@ -52,11 +66,11 @@ subparser = parser.add_subparsers()
 #cat2.addEntry(y1)
 #cat2.addEntry(y2)
 #
-##src1.display()
-##src2.display()
-##cat1.display()
-##cat2.display()
-#
+#src1.display()
+#src2.display()
+#cat1.display()
+#cat2.display()
+
 #with open('src2.pickle', 'wb') as file:
 #    pickle.dump(src2, file)
 #

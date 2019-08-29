@@ -1,6 +1,4 @@
-#!/usr/bin/python3
-
-from spendEntryClass import spendEntry
+from .spendEntryClass import spendEntry
 
 """
 source

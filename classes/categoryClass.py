@@ -1,4 +1,4 @@
-from spendEntryClass import spendEntry
+from .spendEntryClass import spendEntry
 
 """
 category
