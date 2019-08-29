@@ -8,6 +8,31 @@ from spendEntryClass import spendEntry
 from sourceClass import source
 from categoryClass import category
 
+#Used to keep track of all sources and categories through sessions
+#To be pickled/depickled at start of program
+masterSource = {}
+masterCate = {}
+#Used for commands that require listing of all the sources/cate
+listStrSource = ''
+listStrCate = ''
+
+#Standard argument parser
+#a lot of help from the argparse documentation
+#https://docs.python.org/3/library/argparse.html
+#and this write-up
+#https://realpython.com/comparing-python-command-line-parsing-libraries-argparse-docopt-click/
+parser = argparse.ArgumentParser()
+subparser = parser.add_subparsers()
+
+#newcate <name>
+#newsrc <name> <amount>
+#addentry <name> <amount>
+#listsrc
+#listcate
+#viewsrc <name>
+#viewcate <name>
+#TBD: delsrc delcate delentry --version
+
 #src1 = source('wallet', 200)
 #src2 = source('tdacc', 1000)
 #cat1 = category('games')
