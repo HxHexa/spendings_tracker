@@ -5,7 +5,7 @@ The spendings_tracker project, but written in Python instead. Currently a WIP, b
 ## To-Do:
 
  - Set up command-line arguments for interacting with the program
-    + Commands list: newsrc addentry listsrc viewsource viewcate delsrc delcate delentry
+    + Commands list: newsrc addentry listsrc viewsrc viewcate delsrc delcate delentry
     + (DONE) Commands list: newcate listcate
  
  - (DONE) Work with pickle to allow for storage of class data between usage
@@ -23,6 +23,10 @@ The spendings_tracker project, but written in Python instead. Currently a WIP, b
 - Tracking of debts/loans and eventually credit cards (the reason why I do not want to do this one immediately personally is because I pay all my credit card debt before the end of the month, so my credit and bank account are basically interchangable. It's not like anybody is going to use this piece of crap aside from me anytime soon anyways haha)
 
 - Exporting to csv
+
+- Foreign exchange?
+
+- An actual GUI
 
 ## Usage:
 

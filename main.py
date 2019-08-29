@@ -22,11 +22,20 @@ if len(sys.argv)==1:
     parser.print_help(sys.stderr)
     sys.exit(1)
 
-#TBDone: delsrc delcate delentry --version
 #newcate <name>
 newcate = subparser.add_parser('newcate', help='create a new spendings category')
 newcate.add_argument('name', help='name of new category')
 newcate.set_defaults(func=commands.newcate)
+
+#newsrc <name> <amount>
+newsrc = subparser.add_parser('newsrc', help='create a new source with designated amount')
+newsrc.add_argument('name', help='name of new source')
+newsrc.add_argument('amount', help='amount of money already in source')
+newsrc.set_defaults(func=commands.newsrc)
+
+#listsrc
+listsrc = subparser.add_parser('listsrc', help='list all sources')
+listsrc.set_defaults(func=commands.listsrc)
 
 #listcate
 listcate = subparser.add_parser('listcate', help='list all categories')
