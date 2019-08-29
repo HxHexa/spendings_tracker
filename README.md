@@ -22,6 +22,26 @@ The spendings_tracker project, but written in Python instead. Currently a WIP, b
 
 - Tracking of debts/loans and eventually credit cards (the reason why I do not want to do this one immediately personally is because I pay all my credit card debt before the end of the month, so my credit and bank account are basically interchangable. It's not like anybody is going to use this piece of crap aside from me anytime soon anyways haha)
 
+## Usage:
+
+*well this is useless anyways since this is a 'personal project' and all but hey, it makes the thing looks more complete, which makes me feel better*
+
+### Installation:
+
+Simply download the source code and run main.py. This is a fully command-line program for now.
+
+### Commands:
+
+These helps will also be displayed with the built-in help commands. You can input the commands by passing it in as an argument, like such:
+
+```
+./main.py newcate 'books'
+```
+
+newcate <name>: Create a new category to put spendings under.
+
+listcate: List all created categories
+
 ## FAQ:
 
 ### 1) But why?
