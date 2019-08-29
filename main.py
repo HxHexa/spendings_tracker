@@ -9,14 +9,6 @@ import sys
 from classes import source, category, spendEntry
 import commands
 
-#Used to keep track of all sources and categories through sessions
-#To be pickled/depickled at start of program
-masterSource = {}
-masterCate = {}
-#Used for commands that require listing of all the sources/cate
-listStrSource = ''
-listStrCate = ''
-
 #Standard argument parser
 #a lot of help from the argparse documentation
 #https://docs.python.org/3/library/argparse.html
@@ -45,6 +37,8 @@ newcate.set_defaults(func=commands.newcate)
 
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()
+print(args)
+print(commands.globalvar.masterCate)
 args.func(args)
 
 #src1 = source('wallet', 200)
