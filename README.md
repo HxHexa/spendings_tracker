@@ -5,9 +5,10 @@ The spendings_tracker project, but written in Python instead. Currently a WIP, b
 ## To-Do:
 
  - Set up command-line arguments for interacting with the program
-    + Commands list: newsrc newcate addentry listsrc listcate viewsource viewcate delsrc delcate delentry
+    + Commands list: newsrc addentry listsrc viewsource viewcate delsrc delcate delentry
+    + (DONE) Commands list: newcate listcate
  
- - Work with pickle to allow for storage of class data between usage
+ - (DONE) Work with pickle to allow for storage of class data between usage
  
  A "version 0.1" will probably come out when all the basic functionalities are, well, functional enough for me to be able to use it on a daily basis.
 
@@ -17,7 +18,7 @@ The spendings_tracker project, but written in Python instead. Currently a WIP, b
 
 - Monthly/weekly/daily tracking (probably with using a tree structure but there must be a better way)
 
-- Tracking of earnings (actually this should be pretty easy to do. Just take the entry and negate the amount. Will get to this of eventually)
+- Tracking of earnings (actually this should be pretty easy to do. Just take the entry and negate the amount. Will get to this one eventually)
 
 - Tracking of debts/loans and eventually credit cards (the reason why I do not want to do this one immediately personally is because I pay all my credit card debt before the end of the month, so my credit and bank account are basically interchangable. It's not like anybody is going to use this piece of crap aside from me anytime soon anyways haha)
 
