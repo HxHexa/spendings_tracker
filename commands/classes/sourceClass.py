@@ -15,9 +15,11 @@ class source():
         self.spendEntryList = []
 
     def display(self):
-        print('Source Name:{0} Amount:{1} Entries:'.format(self.name, self.amount))
+        print('Source Name: \'{0}\' Amount: {1} Entries:'.format(self.name, self.amount))
         for i in self.spendEntryList:
-            print('{0} - {1}'.format(i.name, i.amount))
+            counter = 1
+            print('{0}. {1} - {2}'.format(counter, i.name, i.amount))
+            counter += 1
 
     def setName(self, newname):
         self.name = newname

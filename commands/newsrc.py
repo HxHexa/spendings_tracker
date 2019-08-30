@@ -4,8 +4,12 @@
 
 from . import classes
 from . import globalvar
+import sys
 
 def newsrc(args):
+    if len(args.name) < 2:
+        print('All names for source must be at least 2 characters long.')
+        sys.exit(1)
     try:
         globalvar.masterSource[args.name]
         print('Source with duplicate name already exists.')

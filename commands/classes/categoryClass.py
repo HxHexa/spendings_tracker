@@ -20,7 +20,9 @@ class category():
     def display(self):
         print('Category Name:{0} Amount:{1} Entries:'.format(self.name, self.amount))
         for i in self.spendEntryList:
-            print('{0} - {1}'.format(i.name, i.amount))
+            counter = 1
+            print('{0}. {1} - {2}'.format(counter, i.name, i.amount))
+            counter += 1
 
     def setName(self, name):
         self.name = name
@@ -33,5 +35,5 @@ class category():
         self.amount += spendEntry.amount
 
     def removeEntry(self, spendEntry):
-        self.spendEntryList.append(spendEntry)
+        self.spendEntryList.remove(spendEntry)
         self.amount -= spendEntry.amount

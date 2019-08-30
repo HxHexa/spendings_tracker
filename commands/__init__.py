@@ -7,5 +7,7 @@ from .newsrc import newsrc
 from .listsrc import listsrc
 from .listcate import listcate
 from .newentry import newentry
+from .viewsrc import viewsrc
+from .viewcate import viewcate
 
 from .reset import reset

@@ -8,7 +8,7 @@ import sys
 
 def newcate(args):
     if len(args.name) < 2:
-        print('All names must be at least 2 characters long.')
+        print('All names for category must be at least 2 characters long.')
         sys.exit(1)
     try:
         globalvar.masterCate[args.name]

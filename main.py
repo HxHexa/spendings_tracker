@@ -23,7 +23,7 @@ if len(sys.argv)==1:
     sys.exit(1)
 
 #version number
-parser.add_argument('--version', action='version', version='0.01')
+parser.add_argument('--version', action='version', version='0.02')
 
 #reset
 reset = subparser.add_parser('reset', help='create new .pickle files and wipe previous data')
@@ -53,6 +53,16 @@ newentry = subparser.add_parser('newentry', help='add a new spending entry')
 newentry.add_argument('name', help='name of new entry')
 newentry.add_argument('amount', help='amount of money spent', type=float)
 newentry.set_defaults(func=commands.newentry)
+
+#viewsrc
+viewsrc = subparser.add_parser('viewsrc', help='view the details of a source', aliases=['viewsource'])
+viewsrc.add_argument('name', help='name of source to view')
+viewsrc.set_defaults(func=commands.viewsrc)
+
+#viewcate
+viewcate = subparser.add_parser('viewcate', help='view the details of a category', aliases=['viewcategory'])
+viewcate.add_argument('name', help='name of category to view')
+viewcate.set_defaults(func=commands.viewcate)
 
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()
