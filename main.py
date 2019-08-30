@@ -22,15 +22,22 @@ if len(sys.argv)==1:
     parser.print_help(sys.stderr)
     sys.exit(1)
 
+#version number
+parser.add_argument('--version', action='version', version='0.01')
+
+#reset
+reset = subparser.add_parser('reset', help='create new .pickle files and wipe previous data')
+reset.set_defaults(func=commands.reset)
+
 #newcate <name>
-newcate = subparser.add_parser('newcate', help='create a new spendings category')
+newcate = subparser.add_parser('newcate', help='create a new spendings category', aliases=['newcategory'])
 newcate.add_argument('name', help='name of new category')
 newcate.set_defaults(func=commands.newcate)
 
 #newsrc <name> <amount>
-newsrc = subparser.add_parser('newsrc', help='create a new source with designated amount')
+newsrc = subparser.add_parser('newsrc', help='create a new source with designated amount', aliases=['newsource'])
 newsrc.add_argument('name', help='name of new source')
-newsrc.add_argument('amount', help='amount of money already in source')
+newsrc.add_argument('amount', help='amount of money already in source', type=float)
 newsrc.set_defaults(func=commands.newsrc)
 
 #listsrc
@@ -40,6 +47,12 @@ listsrc.set_defaults(func=commands.listsrc)
 #listcate
 listcate = subparser.add_parser('listcate', help='list all categories')
 listcate.set_defaults(func=commands.listcate)
+
+#newentry
+newentry = subparser.add_parser('newentry', help='add a new spending entry')
+newentry.add_argument('name', help='name of new entry')
+newentry.add_argument('amount', help='amount of money spent', type=float)
+newentry.set_defaults(func=commands.newentry)
 
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()

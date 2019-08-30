@@ -1,7 +1,10 @@
 addentry
 viewsrc
 viewcate
+viewentry
 delsrc
 delcate
 delentry
---version
+renamesrc/cate/entry
+setamountsrc/cate/entry
+editnote

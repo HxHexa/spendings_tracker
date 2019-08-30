@@ -16,7 +16,6 @@ if __name__ != '__main__':
             masterSource = pickle.load(file)
     except FileNotFoundError:
         print('masterSource.pickle not found.')
-        masterSource = {}
         notfound = 1
 
     try:
@@ -24,7 +23,6 @@ if __name__ != '__main__':
             masterCate = pickle.load(file)
     except FileNotFoundError:
         print('masterCate.pickle not found.')
-        masterCate = {}
         notfound = 1
 
     #Used for commands that require listing of all the sources/cate
@@ -33,7 +31,6 @@ if __name__ != '__main__':
             listStrSource = pickle.load(file)
     except FileNotFoundError:
         print('listStrSource.pickle not found.')
-        listStrSource = ''
         notfound = 1
 
     try:
@@ -41,9 +38,10 @@ if __name__ != '__main__':
             listStrCate = pickle.load(file)
     except FileNotFoundError:
         print('listStrCate.pickle not found.')
-        listStrCate = ''
         notfound = 1
 
 if notfound == 1:
-    print('Some .pickle files were not found. If this is the first time you run this program,')
-    print('these files will be generated automaticaly after using any commands other than -h.')
+    print('Some files were not found. If this is the first time you run')
+    print('this program, please run the \'reset.\' command. These files will')
+    print('also be generated upon successful execution of any commands other')
+    print('than -h/--help and --version.')

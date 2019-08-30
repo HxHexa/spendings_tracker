@@ -12,6 +12,8 @@ class spendEntry:
         self.name = name
         self.amount = amount
         self.note = note
+        self.category = []
+        self.source = []
 
     def setName(self, newname):
         self.name = newname
