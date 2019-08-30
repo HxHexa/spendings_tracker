@@ -46,21 +46,21 @@ These helps will also be displayed with the built-in help commands. You can inpu
 
 Additionally, instead of 'src' or 'cate', you could instead type 'source' or 'category' in full, like 'newsource' or 'viewcategory'. This applies to all commands of the same format.
 
-newsrc \<name\> \<amount\>: Create a new source to subtract spendings from. Amount is the amount of money already in the source.
+ - newsrc \<name\> \<amount\>: Create a new source to subtract spendings from. Amount is the amount of money already in the source.
 
-newcate \<name\>: Create a new category to put spendings under.
+ - newcate \<name\>: Create a new category to put spendings under.
 
-listsrc: List all created sources.
+ - listsrc: List all created sources.
 
-listcate: List all created categories.
+ - listcate: List all created categories.
 
-newentry \<name\> \<amount\>: Add a new spending entry. The command will prompt the user for the source to subtract the spending from and the categories to put it under, in addition to an optional note option if the user wants to add a note to the spending.
+ - newentry \<name\> \<amount\>: Add a new spending entry. The command will prompt the user for the source to subtract the spending from and the categories to put it under, in addition to an optional note option if the user wants to add a note to the spending.
 
-viewsrc \<name\>: View the details and the spendings made for a source.
+ - viewsrc \<name\>: View the details and the spendings made for a source.
 
-viewcate \<name\>: View the details and the spendings put under a category.
+ - viewcate \<name\>: View the details and the spendings put under a category.
 
-reset: Create new blank data. Should only be used if you are running the program for the first time, or when you want to delete everything and start anew.
+ - reset: Create new blank data. Should only be used if you are running the program for the first time, or when you want to delete everything and start anew.
 
 ## FAQ:
 
