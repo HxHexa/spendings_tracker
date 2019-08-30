@@ -23,7 +23,7 @@ if len(sys.argv)==1:
     sys.exit(1)
 
 #version number
-parser.add_argument('--version', action='version', version='0.03')
+parser.add_argument('--version', action='version', version='0.04')
 
 #reset
 reset = subparser.add_parser('reset', help='create new .pickle files and wipe previous data')
@@ -63,6 +63,10 @@ viewsrc.set_defaults(func=commands.viewsrc)
 viewcate = subparser.add_parser('viewcate', help='view the details of a category', aliases=['viewcategory'])
 viewcate.add_argument('name', help='name of category to view')
 viewcate.set_defaults(func=commands.viewcate)
+
+#viewentry
+viewentry = subparser.add_parser('viewentry', help='look up the details of an entry')
+viewentry.set_defaults(func=commands.viewentry)
 
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()

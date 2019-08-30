@@ -9,15 +9,14 @@ import sys
 def newentry(args):
     #while loop to get input for source
     print('Sources: {0}'.format(globalvar.listStrSource))
-    received = False
-    while received != True:
+    while True:
         source = input('Enter a source, or type \'q\' to quit: ')
         if source == 'q':
             print('Cancelling operation...')
             sys.exit(1)
         try:
             globalvar.masterSource[source]
-            received = True
+            break
         except KeyError:
             print('Source not found. Please try again.')
 
@@ -41,6 +40,7 @@ def newentry(args):
                 break
 
     #adding notes
+    note = 'None'
     while True:
         decision = input('Do you want to add a note to this entry? (y/n) ')
         if decision == 'n':
@@ -56,6 +56,9 @@ def newentry(args):
     globalvar.masterSource[source].addEntry(newentry) #adding to source
     for i in cateList:
         globalvar.masterCate[i].addEntry(newentry) #adding to categories
+    #setting variables for tracking in entry
+    newentry.source = source
+    newentry.category = cateList
 
     #ending
     print('Entry \'{0}\' with amount {1} successfully added to source \'{2}\' and categories: {3}'.format(args.name, args.amount, source, cateList))

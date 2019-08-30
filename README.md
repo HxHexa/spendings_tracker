@@ -60,6 +60,8 @@ Additionally, instead of 'src' or 'cate', you could instead type 'source' or 'ca
 
  - viewcate \<name\>: View the details and the spendings put under a category.
 
+ - viewentry: View the details of an entry under a specific source/category.
+
  - reset: Create new blank data. Should only be used if you are running the program for the first time, or when you want to delete everything and start anew.
 
 ## FAQ:

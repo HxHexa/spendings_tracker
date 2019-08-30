@@ -16,6 +16,7 @@ class source():
 
     def display(self):
         print('Source Name: \'{0}\' Amount: {1} Entries:'.format(self.name, self.amount))
+        print('ID. Name - Amount')
         for i in self.spendEntryList:
             counter = 1
             print('{0}. {1} - {2}'.format(counter, i.name, i.amount))
