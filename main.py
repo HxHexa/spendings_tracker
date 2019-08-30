@@ -41,11 +41,11 @@ newsrc.add_argument('amount', help='amount of money already in source', type=flo
 newsrc.set_defaults(func=commands.newsrc)
 
 #listsrc
-listsrc = subparser.add_parser('listsrc', help='list all sources')
+listsrc = subparser.add_parser('listsrc', help='list all sources', aliases=['listsource'])
 listsrc.set_defaults(func=commands.listsrc)
 
 #listcate
-listcate = subparser.add_parser('listcate', help='list all categories')
+listcate = subparser.add_parser('listcate', help='list all categories', aliases=['listcategory'])
 listcate.set_defaults(func=commands.listcate)
 
 #newentry
