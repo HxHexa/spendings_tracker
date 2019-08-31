@@ -10,5 +10,8 @@ from .newentry import newentry
 from .viewsrc import viewsrc
 from .viewcate import viewcate
 from .viewentry import viewentry
+from .delsrc import delsrc
+from .delcate import delcate
+
 
 from .reset import reset

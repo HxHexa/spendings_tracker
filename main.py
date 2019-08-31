@@ -68,6 +68,16 @@ viewcate.set_defaults(func=commands.viewcate)
 viewentry = subparser.add_parser('viewentry', help='look up the details of an entry')
 viewentry.set_defaults(func=commands.viewentry)
 
+#delsrc
+delsrc = subparser.add_parser('delsrc', help='delete a source', aliases=['delsource'])
+delsrc.add_argument('name', help='name of source to delete.')
+delsrc.set_defaults(func=commands.delsrc)
+
+#delcate
+delcate = subparser.add_parser('delcate', help='delete a category', aliases=['delcategory'])
+delcate.add_argument('name', help='name of cate to delete.')
+delcate.set_defaults(func=commands.delcate)
+
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()
 args.func(args)
