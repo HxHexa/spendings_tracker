@@ -1,0 +1,5 @@
+v0.05:
+ - Added support for viewing entries common to multiple categories using
+ viewcate
+ - Fixed an issue with the display() command of source and cate where the IDs
+ of entries were not shown counting up
