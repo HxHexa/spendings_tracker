@@ -41,12 +41,12 @@ def viewentry(args):
         #Picking an entry to display
         globalvar.masterSource[source].display()
         while True:
-            num = int(input('Enter the ID of the entry, or type \'q\' to quit: '))
+            num = input('Enter the ID of the entry, or type \'q\' to quit: ')
             if num == 'q':
                 print('Cancelling operation...')
                 sys.exit(1)
             try:
-                globalvar.masterSource[source].spendEntryList[num - 1].display()
+                globalvar.masterSource[source].spendEntryList[int(num) - 1].display()
                 break
             except IndexError:
                 print('Invalid ID number. Please try again.')

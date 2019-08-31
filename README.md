@@ -7,9 +7,9 @@ The spendings_tracker project, but written in Python instead. Currently a WIP, b
  - Set up command-line arguments for interacting with the program
     + Commands list: newsrc addentry listsrc viewsrc viewcate delsrc delcate delentry
     + (DONE) Commands list: newcate listcate
- 
+
  - (DONE) Work with pickle to allow for storage of class data between usage
- 
+
  A "version 0.1" will probably come out when all the basic functionalities are, well, functional enough for me to be able to use it on a daily basis.
 
 ## Further To-Do:
@@ -27,6 +27,10 @@ The spendings_tracker project, but written in Python instead. Currently a WIP, b
 - Foreign exchange?
 
 - An actual GUI
+
+- A way to show common entries from multiple categories
+
+- Main categories and sub-categories
 
 ## Usage:
 
@@ -58,7 +62,7 @@ Additionally, instead of 'src' or 'cate', you could instead type 'source' or 'ca
 
  - viewsrc \<name\>: View the details and the spendings made for a source.
 
- - viewcate \<name\>: View the details and the spendings put under a category.
+ - viewcate \<name\>: View the details and the spendings put under a category. User can input multiple categories in a format similar to that in newentry to view the details on entries that are categorised under multiple categories.
 
  - viewentry: View the details of an entry under a specific source/category.
 
