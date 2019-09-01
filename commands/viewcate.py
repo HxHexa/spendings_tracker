@@ -14,7 +14,7 @@ def viewcate(args):
         try:
             globalvar.masterCate[args.name].display()
         except KeyError:
-            print('Category {0} not found.'.format(args.name))
+            print('Category not found.')
             sys.exit(1)
     else:
         cateViewList = []

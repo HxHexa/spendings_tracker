@@ -22,7 +22,6 @@ def newentry(args):
 
     #while loop to get input for category
     print('Categories: {0}'.format(globalvar.listStrCate))
-    print('Example input: august,groceries,food')
     received = False
     while received != True:
         cate = input('Enter categories to add this entry to seperated by a comma, or type \'q\' to quit: ')

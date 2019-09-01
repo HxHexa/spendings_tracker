@@ -23,7 +23,7 @@ if len(sys.argv)==1:
     sys.exit(1)
 
 #version number
-parser.add_argument('--version', action='version', version='0.05')
+parser.add_argument('--version', action='version', version='0.06')
 
 #reset
 reset = subparser.add_parser('reset', help='create new .pickle files and wipe previous data')
