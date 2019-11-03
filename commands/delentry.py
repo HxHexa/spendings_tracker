@@ -48,10 +48,17 @@ def delentry(args):
             if num == 'q':
                 print('Cancelling operation...')
                 sys.exit(1)
-            if int(num) > len(globalvar.masterSource[source].spendEntryList) or int(num) < 1:
+            elif int(num) > len(globalvar.masterSource[source].spendEntryList) or int(num) < 1:
                 print('Invalid ID number. Please try again.')
             else:
                 break
+        #removing the entry from corresponding sources and cate
+        targetEntry = globalvar.masterSource[source].spendEntryList[int(num) - 1]
+        globalvar.masterSource[source].removeEntry(targetEntry)
+        print('Entry removed from source {}'.format(source))
+        for i in targetEntry.category:
+            globalvar.masterCate[i].removeEntry(targetEntry)
+            print('Entry removed from cate {}'.format(i))
 
     if cate == 1:
         #Picking a source to look under
@@ -74,7 +81,13 @@ def delentry(args):
             if num == 'q':
                 print('Cancelling operation...')
                 sys.exit(1)
-            if int(num) > len(globalvar.masterCate[cate].spendEntryList) or int(num) < 1:
+            elif int(num) > len(globalvar.masterCate[cate].spendEntryList) or int(num) < 1:
                 print('Invalid ID number. Please try again.')
             else:
                 break
+        #removing the entry from corresponding sources and cate
+        targetEntry = globalvar.masterCate[cate].spendEntryList[int(num) - 1]
+        globalvar.masterCate[cate].removeEntry(targetEntry)
+        print('Entry removed from cate {}'.format(cate))
+        globalvar.masterSource[targetEntry.source].removeEntry(targetEntry)
+        print('Entry removed from source {}'.format(targetEntry.source))

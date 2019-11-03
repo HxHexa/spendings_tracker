@@ -50,7 +50,7 @@ listcate = subparser.add_parser('listcate', help='list all categories', aliases=
 listcate.set_defaults(func=commands.listcate)
 
 #newentry
-newentry = subparser.add_parser('newentry', help='add a new spending entry')
+newentry = subparser.add_parser('newentry', help='add a new spending entry', aliases=['addentry'])
 newentry.add_argument('name', help='name of new entry')
 newentry.add_argument('amount', help='amount of money spent', type=float)
 newentry.set_defaults(func=commands.newentry)

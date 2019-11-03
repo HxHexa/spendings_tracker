@@ -15,6 +15,15 @@ class spendEntry:
         self.category = []
         self.source = ''
 
+    #overloading eq for remove commands
+    def __eq__(self, other):
+        eqCheck = [self.name == other.name,
+                   self.amount == other.amount,
+                   self.note == other.note,
+                   self.category == other.category,
+                   self.source == other.source]
+        return all(eqCheck)
+
     def setName(self, newname):
         self.name = newname
 
