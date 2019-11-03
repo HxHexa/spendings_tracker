@@ -31,12 +31,12 @@ reset = subparser.add_parser('reset', help='create new .pickle files and wipe pr
 reset.set_defaults(func=commands.reset)
 
 #newcate <name>
-newcate = subparser.add_parser('newcate', help='create a new spendings category', aliases=['newcategory'])
+newcate = subparser.add_parser('newcate', help='create a new spendings category', aliases=['newcategory', 'addcate'])
 newcate.add_argument('name', help='name of new category')
 newcate.set_defaults(func=commands.newcate)
 
 #newsrc <name> <amount>
-newsrc = subparser.add_parser('newsrc', help='create a new source with designated amount', aliases=['newsource'])
+newsrc = subparser.add_parser('newsrc', help='create a new source with designated amount', aliases=['newsource', 'addsrc', 'addsource'])
 newsrc.add_argument('name', help='name of new source')
 newsrc.add_argument('amount', help='amount of money already in source', type=float)
 newsrc.set_defaults(func=commands.newsrc)

@@ -48,11 +48,10 @@ def delentry(args):
             if num == 'q':
                 print('Cancelling operation...')
                 sys.exit(1)
-            try:
-                globalvar.masterSource[source].spendEntryList[int(num) - 1].display()
-                break
-            except IndexError:
+            if int(num) > len(globalvar.masterSource[source].spendEntryList) or int(num) < 1:
                 print('Invalid ID number. Please try again.')
+            else:
+                break
 
     if cate == 1:
         #Picking a source to look under
@@ -75,8 +74,7 @@ def delentry(args):
             if num == 'q':
                 print('Cancelling operation...')
                 sys.exit(1)
-            try:
-                globalvar.masterCate[cate].spendEntryList[num - 1].display()
-                break
-            except IndexError:
+            if int(num) > len(globalvar.masterCate[cate].spendEntryList) or int(num) < 1:
                 print('Invalid ID number. Please try again.')
+            else:
+                break
