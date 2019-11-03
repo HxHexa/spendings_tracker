@@ -2,6 +2,9 @@
 #args: name
 #deletes a category
 
+from . import globalvar
+from . import classes
+
 def delcate(args):
     #category can only be deleted if empty
     if len(globalvar.masterCate[args.name].spendEntryList) != 0:

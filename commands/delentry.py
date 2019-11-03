@@ -3,6 +3,7 @@
 #deletes an entry
 
 from . import classes
+from . import globalvar
 import sys
 
 def delentry(args):
