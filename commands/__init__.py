@@ -12,6 +12,6 @@ from .viewcate import viewcate
 from .viewentry import viewentry
 from .delsrc import delsrc
 from .delcate import delcate
-
+from .delentry import delentry
 
 from .reset import reset

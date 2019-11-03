@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 #main program
 
+
 import pickle
 import io
 import argparse
@@ -77,6 +78,10 @@ delsrc.set_defaults(func=commands.delsrc)
 delcate = subparser.add_parser('delcate', help='delete a category', aliases=['delcategory'])
 delcate.add_argument('name', help='name of cate to delete.')
 delcate.set_defaults(func=commands.delcate)
+
+#delentry
+delentry = subparser.add_parser('delentry', help='delete an entry')
+delentry.set_defaults(func=commands.delentry)
 
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()

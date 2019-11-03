@@ -30,8 +30,8 @@ class source():
 
     def addEntry(self, spendEntry):
         self.spendEntryList.append(spendEntry)
-        self.amount -= spendEntry.amount
+        self.amount += spendEntry.amount
 
     def removeEntry(self, spendEntry):
         self.spendEntryList.remove(spendEntry)
-        self.amount += spendEntry.amount
+        self.amount -= spendEntry.amount
