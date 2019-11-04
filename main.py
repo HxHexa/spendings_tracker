@@ -24,7 +24,7 @@ if len(sys.argv)==1:
     sys.exit(1)
 
 #version number
-parser.add_argument('--version', action='version', version='0.06')
+parser.add_argument('--version', action='version', version='0.2')
 
 #reset
 reset = subparser.add_parser('reset', help='create new .pickle files and wipe previous data')
@@ -35,10 +35,11 @@ newcate = subparser.add_parser('newcate', help='create a new spendings category'
 newcate.add_argument('name', help='name of new category')
 newcate.set_defaults(func=commands.newcate)
 
-#newsrc <name> <amount>
+#newsrc <name> <amount> <interest>
 newsrc = subparser.add_parser('newsrc', help='create a new source with designated amount', aliases=['newsource', 'addsrc', 'addsource'])
 newsrc.add_argument('name', help='name of new source')
 newsrc.add_argument('amount', help='amount of money already in source', type=float)
+newsrc.add_argument('interest', help='source interest rate if exists. If not, use 0.', type=float)
 newsrc.set_defaults(func=commands.newsrc)
 
 #listsrc
@@ -82,6 +83,15 @@ delcate.set_defaults(func=commands.delcate)
 #delentry
 delentry = subparser.add_parser('delentry', help='delete an entry')
 delentry.set_defaults(func=commands.delentry)
+
+#calcint
+calcint = subparser.add_parser('calcint', help='calculates interest of a source', aliases=['calculateint, calculateinterest, calcinterest'])
+calcint.add_argument('source', help='name of source to calculate interest.')
+calcint.set_defaults(func=commands.calcint)
+
+#transfer
+transfer = subparser.add_parser('transfer', help='transfer to a different source an amount')
+transfer.set_defaults(func=commands.transfer)
 
 #calling the default functions, defined in the specific commands files
 args = parser.parse_args()

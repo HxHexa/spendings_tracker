@@ -1,4 +1,5 @@
 from .spendEntryClass import spendEntry
+import math
 
 """
 category
@@ -34,7 +35,9 @@ class category():
     def addEntry(self, spendEntry):
         self.spendEntryList.append(spendEntry)
         self.amount += spendEntry.amount
+        self.amount = round(self.amount, 2)
 
     def removeEntry(self, spendEntry):
         self.spendEntryList.remove(spendEntry)
         self.amount -= spendEntry.amount
+        self.amount = round(self.amount, 2)

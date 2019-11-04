@@ -24,7 +24,7 @@ I finally got back to finishing this once I realise my financial issues cannot b
 
 *if I have the time for it*
 
-- Monthly/weekly/daily tracking (probably with using a tree structure but there must be a better way)
+- (DONE?) Monthly/weekly/daily tracking (probably with using a tree structure but there must be a better way) (Create corresponding categories like Monday, November, NovemberWk1 and the likes)
 
 - (DONE) Tracking of earnings (actually this should be pretty easy to do. Just take the entry and negate the amount. Will get to this one eventually)
 

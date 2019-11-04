@@ -14,4 +14,7 @@ from .delsrc import delsrc
 from .delcate import delcate
 from .delentry import delentry
 
+from .calcint import calcint
+from .transfer import transfer
+
 from .reset import reset
